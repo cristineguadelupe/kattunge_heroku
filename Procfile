@@ -1,0 +1,1 @@
+web: gunicorn kattunge.wsgi --log-file -

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classificador de Gatinhos</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="../../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Axios and Ajax -->
+    <script src="../../static/vendor/vue/vue.min.js"></script>
+    <script src="../../static/vendor/axios/axios.min.js"></script>
+    <script src="../../static/vendor/popper/popper.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="../../static/base.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <div>
+            <img src="../../static/vendor/svg/happy.svg" width="50" height="50" alt="...">
+            <span>Acho que vi um gatinho!</span>
+            <a class="btn btn-primary" href="{% url 'create' %}">Será?</a>
+        </div>
+
+    </div>
+</nav>
+<div id="wrapper">
+    <div id="content-wrapper">
+        <div class="container-fluid">
+            {% block content %}
+            {% endblock %}
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+</body>
+</html>

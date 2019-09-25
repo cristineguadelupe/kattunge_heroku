@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="card mb-3" style="max-width: 640px;">
+            <form method="POST">
+                <div class="row no-gutters">
+                    <div class="col-md-6">
+                        <img src="{{object.img.url}}" class="card-img-top" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h4>Remover classificação</h4>
+                            <h6>{{object.prediction}}</h6>
+
+                            {% csrf_token %}
+                            <hr>
+                            <button class="btn btn-danger" type="submit">Remover</button>
+                            <a class="btn btn-secondary" href="{% url 'list' %}">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
